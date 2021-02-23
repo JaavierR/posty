@@ -8,7 +8,8 @@
                 {{ $user->name }}
             </h1>
             <p class="text-purple-500">
-                Posted {{ $posts->count() }} {{ Str::plural('post', $posts->count()) }}
+                Posted {{ $posts->count() }} {{ Str::plural('post', $posts->count()) }} and received
+                {{ $user->receivedLikes->count() }} {{ Str::plural('like', $user->receivedLikes->count()) }}
             </p>
         </div>
 
