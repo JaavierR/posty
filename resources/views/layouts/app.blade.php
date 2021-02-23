@@ -11,7 +11,7 @@
 </head>
 
 <body class="bg-gray-200">
-    <nav class="p-6 bg-white flex justify-between mb-6">
+    <nav class="p-6 bg-white shadow flex justify-between mb-6">
         <ul class="flex item-center">
             <li><a href="/" class="p-3">Home</a></li>
             <li><a href="{{ route('dashboard') }}" class="p-3">Dashboard</a></li>
