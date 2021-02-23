@@ -38,15 +38,13 @@
                 {{ $post->body }}
             </div>
 
-            @if ($post->ownedBy(auth()->user()))
-            <div>
-                <form action="{{ route('posts.destroy', $post) }}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="text-red-500">Delete</button>
-                </form>
-            </div>
-            @endif
+            @can('delete', $post)
+            <form action="{{ route('posts.destroy', $post) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="text-red-500">Delete</button>
+            </form>
+            @endcan
 
             <div class="flex items-center">
                 @auth
