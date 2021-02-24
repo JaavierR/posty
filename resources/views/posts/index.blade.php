@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="flex justify-center mb-4">
+    @auth
     <div class="bg-white w-8/12 p-6 rounded-lg">
         <form action="{{ route('posts') }}" method="post">
             @csrf
@@ -25,6 +26,7 @@
             </div>
         </form>
     </div>
+    @endauth
 </div>
 
 <div class="flex justify-center">
